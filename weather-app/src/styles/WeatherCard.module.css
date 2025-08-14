@@ -1,0 +1,103 @@
+.container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.header {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #686868;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E4EAF2;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.leftSection {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.leftSection h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1e90ff;
+}
+
+.mainTemp {
+  font-size: 4rem; 
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.leftSection p {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+}
+
+.rightSection {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.infoLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee; /* Linha sutil para separar as informações */
+}
+
+.infoLine:last-child {
+  border-bottom: none;
+}
+
+.infoLine span:first-child {
+  color: #686868;
+}
+
+.infoLine span:last-child {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column; /* Empilha as colunas */
+    gap: 1.5rem;
+  }
+
+  .leftSection, .rightSection {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftSection h2 {
+    font-size: 1.75rem;
+  }
+}
