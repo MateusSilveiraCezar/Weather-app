@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr; 
+  align-items: center; 
+  gap: 10px; 
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.cidade {
+  text-align: left;
+  font-weight: bold;
+}
+
+.temp {
+  text-align: center; 
+  color: #4b86b4;
+  font-size: 1.1rem;
+  font-weight: 600; 
+}
+
+.condicao {
+  text-align: right; 
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Responsividade para o layout do card em telas muito pequenas --- */
+@media (max-width: 450px) {
+  .item {
+    grid-template-columns: 1fr; /* Muda para uma única coluna */
+    text-align: center;
+    gap: 5px;
+  }
+
+  .cidade {
+    text-align: center; /* Centraliza a cidade */
+  }
+  
+  .condicao {
+    text-align: center; /* Centraliza a condição */
+  }
+
+  .temp {
+    order: -1; /* Move a temperatura para o topo do card */
+  }
+}

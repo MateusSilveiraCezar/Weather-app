@@ -1,24 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .hero {
-  width: 100%;
-  height: 70vh;
-  background-image: url('/image.png');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ width: 100%;
+ height: 70vh;
+ background-image: url('/image.png');
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box; /* Adicionado */
+ overflow: hidden; /* Garante que o conteúdo interno não cause overflow */
 }
 
 .overlay {
-  width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+ width: 100%;
+ height: 100%; /* Adicionado para cobrir todo o .hero */
+ color: white;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 2rem;
+ box-sizing: border-box; /* Adicionado */
 }
 
 .title {
@@ -62,4 +69,43 @@
 
 .button:hover {
   background-color: #1c86ee;
+}
+
+/* Media Query para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .overlay {
+    /* Garante que o padding não cause overflow */
+    padding: 1rem;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    /* Adicionamos `width: 100%` e `padding: 0 1rem` aqui */
+    width: 100%;
+    padding: 0 1rem; /* Adiciona padding interno para não ficar grudado nas bordas */
+  }
+
+  .input {
+    min-width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do input */
+  }
+
+  .button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

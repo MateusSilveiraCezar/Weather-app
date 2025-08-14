@@ -14,7 +14,7 @@ export default function InitialSection({ onSearch }) {
   return (
     <section className={styles.hero}>
       <div className={styles.overlay}>
-        <h1 className={styles.title}>ClimaJá</h1>
+        <h1 className={styles.title}>Weather Sense</h1>
         <p className={styles.subtitle}>Veja a previsão do tempo em qualquer cidade</p>
         <div className={styles.searchContainer}>
           <input

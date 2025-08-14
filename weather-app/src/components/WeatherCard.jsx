@@ -1,4 +1,5 @@
 export default function WeatherCard({ data }) {
+
   return (
     <div>
       <h2>{data.name}</h2>

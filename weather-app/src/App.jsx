@@ -3,6 +3,7 @@ import InitialSection from './components/InitialSection';
 import WeatherCard from './components/WeatherCard';
 import ForecastList from './components/ForecastList';
 import { getCurrentWeather, getForecast } from './services/weatherAPI';
+import CapitaisList from './components/CapitaisClima';
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -23,12 +24,13 @@ function App() {
     }
   };
 
-  return (
+ return (
     <>
       <InitialSection onSearch={handleSearch} />
       {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
       {weather && <WeatherCard data={weather} />}
       {forecast && <ForecastList forecast={forecast} />}
+      <CapitaisList />
     </>
   );
 }
