@@ -56,3 +56,18 @@
   color: #666;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1rem; /* Adiciona espaçamento nas laterais */
+    margin: 1rem auto;
+  }
+
+  .title {
+    font-size: 1.2rem; /* Título menor para celular */
+  }
+
+  .forecastGrid {
+    gap: 0.75rem; /* Reduz o espaçamento entre os cards */
+  }
+}

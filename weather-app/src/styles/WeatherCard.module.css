@@ -84,11 +84,20 @@
   color: #333;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 600px) {
+  .container {
+    padding: 1rem; /* Padding ainda menor para telas de celular */
+    margin: 1rem 1rem; /* Adiciona margem lateral para não grudar nas bordas */
+  }
+
+  .header {
+    margin-bottom: 1rem; /* Espaçamento menor no cabeçalho */
+    padding-bottom: 0.75rem;
+  }
+
   .content {
     flex-direction: column; /* Empilha as colunas */
-    gap: 1.5rem;
+    gap: 1rem; /* Reduz o espaçamento entre as seções */
   }
 
   .leftSection, .rightSection {
@@ -96,8 +105,26 @@
     align-items: center;
     text-align: center;
   }
-
+  
   .leftSection h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* Ajusta a fonte do título para celular */
+  }
+
+  .mainTemp {
+    font-size: 3rem; /* Ajusta a fonte da temperatura para celular */
+  }
+
+  /* Centraliza o texto das infoLine para o modo coluna */
+  .infoLine {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .infoLine span:first-child {
+    text-align: right;
+  }
+
+  .infoLine span:last-child {
+    text-align: left;
   }
 }
