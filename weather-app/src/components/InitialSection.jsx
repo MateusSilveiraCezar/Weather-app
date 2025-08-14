@@ -5,11 +5,13 @@ export default function InitialSection({ onSearch }) {
   const [input, setInput] = useState('');
 
   const handleSearch = () => {
-    if (input.trim() !== '') {
-      onSearch(input);
+    const trimmedInput = input.trim();
+    if (trimmedInput !== '') {
+      onSearch(trimmedInput);
       setInput('');
     }
   };
+
 
   return (
     <section className={styles.hero}>
